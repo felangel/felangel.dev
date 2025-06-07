@@ -4,15 +4,15 @@ description: Build and test Astro sites.
 inputs:
   working_directory:
     required: false
-    default: "."
+    default: '.'
     description: The working directory for this workflow
   node_version:
     required: false
-    default: "22"
+    default: '22'
     description: The node version to use.
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: ⚙️ Setup Node
       uses: actions/setup-node@v4
