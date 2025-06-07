@@ -38,9 +38,7 @@ jobs:
         id: needs_site_build
         with:
           filters: |
-            - ./.github/workflows/main.yaml
-            - ./.github/actions/astro_site/action.yaml
-            - src/**
+            - ./**
 
   site_checks:
     needs: changes
