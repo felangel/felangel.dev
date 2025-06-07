@@ -1,0 +1,87 @@
+name: build
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  semantic_pull_request:
+    name: ✅ Semantic Pull Request
+    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
+
+  changes:
+    runs-on: ubuntu-latest
+
+    if: github.event.pull_request.draft == false
+
+    outputs:
+      needs_site_build: ${{ steps.needs_site_build.outputs.changes }}
+
+    name: 👀 Detect Changes
+
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v4
+
+      - uses: dorny/paths-filter@v3
+        name: Site Build Detection
+        id: needs_site_build
+        with:
+          filters: |
+            - ./.github/workflows/main.yaml
+            - ./.github/actions/astro_site/action.yaml
+            - src/**
+
+  site_checks:
+    needs: changes
+    if: ${{ needs.changes.outputs.needs_site_build != '[]' }}
+
+    runs-on: ubuntu-latest
+
+    name: 🌐 Site Build
+
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v4
+
+      - name: 📦 Build Site
+        uses: ./.github/actions/astro_site
+        with:
+          working_directory: .
+
+  deploy:
+    needs: site_checks
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  build:
+    needs: [site_checks, semantic_pull_request]
+
+    if: ${{ always() }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⛔️ exit(1) on failure
+        if: ${{ contains(join(needs.*.result, ','), 'failure') }}
+        run: exit 1
