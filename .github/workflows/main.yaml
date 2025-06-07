@@ -36,6 +36,9 @@ jobs:
       - uses: dorny/paths-filter@v3
         name: Site Build Detection
         id: needs_site_build
+        with:
+          filters: |
+            - *
 
   site_checks:
     needs: changes
