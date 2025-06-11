@@ -1,0 +1,30 @@
+---
+const { title, description, stars, downloads, language, link } = Astro.props;
+---
+
+<a href={link}>
+	<span
+		class="flex flex-col gap-4 border-2 rounded-md hover:border-white border-gray-700 p-4"
+	>
+		<div class="flex flex-row items-center gap-2 text-xl font-bold">
+			<i class="ph ph-book-bookmark text-gray-400"></i><span
+				class="text-gray-200 hover:text-white hover:underline">{title}</span
+			>
+		</div>
+		<div class="text-gray-300">{description}</div>
+		<div class="flex flex-row items-center gap-6" class="text-gray-300">
+			<div class="flex flex-row items-center gap-1">
+				<i class="ph-fill text-teal-500 ph-circle"></i>
+				{language}
+			</div>
+			<div class="flex flex-row items-center gap-1">
+				<i class="ph ph-star"></i>
+				{stars}
+			</div>
+			<div class="flex flex-row items-center gap-1">
+				<i class="ph ph-download-simple"></i>
+				{downloads}
+			</div>
+		</div>
+	</span>
+</a>

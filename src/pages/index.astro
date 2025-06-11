@@ -1,16 +1,10 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
+import Profile from '../components/Profile.astro';
+import Projects from '../components/Projects.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>felangel.dev</title>
-	</head>
-	<body>
-		<h1>Hello 👋</h1>
-	</body>
-</html>
+<MainLayout title="Felix Angelov">
+	<Profile />
+	<Projects />
+</MainLayout>
