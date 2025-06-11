@@ -1,12 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import profile from '../assets/profile.jpeg';
+---
+
 <div
 	class="w-full flex flex-col md:flex-row gap-6 justify-center items-center my-20"
 >
 	<div class="rounded-full border-teal-500 border-2">
-		<img
+		<Image
 			width="254"
 			height="254"
 			class="rounded-full border-gray-200 border-2 size-36"
-			src="https://avatars.githubusercontent.com/u/8855632?v=4"
+			src={profile}
+			alt="Profile picture"
 		/>
 	</div>
 	<div class="flex flex-col gap-4 items-center sm:items-start">
