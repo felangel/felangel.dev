@@ -20,9 +20,28 @@ const { title } = Astro.props;
 		/>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta property="og:title" content="Felix Angelov" />
+		<meta
+			property="og:description"
+			content="Felix Angelov is a Software Engineer in Chicago. He's the creator of many popular open source libraries in the Flutter and Dart ecosytem including bloc, dart_frog, equatable, mocktail, mason, and more. When he's not coding, Felix loves exploring new coffee shops, working on his latte art, and cycling."
+		/>
+		<meta property="og:image" content="/og.png" />
+		<meta property="og:url" content="https://felangel.dev" />
+		<meta
+			name="description"
+			content="Felix Angelov is a Software Engineer in Chicago. He's the creator of many popular open source libraries in the Flutter and Dart ecosytem including bloc, dart_frog, equatable, mocktail, mason, and more. When he's not coding, Felix loves exploring new coffee shops, working on his latte art, and cycling."
+		/>
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:creator" content="felangelov" />
+		<meta name="twitter:title" content="Felix Angelov" />
+		<meta
+			name="twitter:description"
+			content="Felix Angelov is a Software Engineer in Chicago. He's the creator of many popular open source libraries in the Flutter and Dart ecosytem including bloc, dart_frog, equatable, mocktail, mason, and more. When he's not coding, Felix loves exploring new coffee shops, working on his latte art, and cycling."
+		/>
+		<meta name="twitter:image" content="/og.png" />
 		<title>{title}</title>
 	</head>
-	<body class="bg-gray-950 text-white md:container max-w-3xl md:mx-auto p-8">
+	<body class="bg-gray-950 text-white container max-w-4xl mx-auto p-8">
 		<Nav />
 		<slot />
 	</body>
