@@ -7,6 +7,8 @@
 [![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 [![Prettier](https://img.shields.io/badge/prettier-1A2C34?logo=prettier&logoColor=F7BA3E)](https://prettier.io)
 
+## 🧞 Commands
+
 All commands are run from the root of the project, from a terminal:
 
 | Command           | Action                                       |
