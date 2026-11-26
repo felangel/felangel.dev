@@ -11,13 +11,18 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.4.2",
+    "@astrojs/sitemap": "^3.7.6",
     "@tailwindcss/vite": "^4.1.8",
-    "astro": "^5.12.8",
+    "astro": "^7.4.13",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^1.1.2"
+  },
+  "allowScripts": {
+    "@tailwindcss/oxide": false,
+    "esbuild": false,
+    "fsevents": false
   }
 }
