@@ -6,40 +6,40 @@ const projects = [
 		title: 'bloc',
 		language: 'Dart',
 		description: 'A predictable state management library.',
-		stars: '12.3K',
-		downloads: '2.37M',
+		stars: '12.5K',
+		downloads: '2.5M',
 		link: 'https://github.com/felangel/bloc',
 	},
 	{
 		title: 'dart_frog',
 		language: 'Dart',
 		description: 'A fast, minimalistic backend framework for Dart.',
-		stars: '2.1K',
-		downloads: '22.6K',
+		stars: '2.3K',
+		downloads: '237K',
 		link: 'https://github.com/dart-frog-dev/dart_frog',
 	},
 	{
 		title: 'equatable',
 		language: 'Dart',
 		description: 'Value based equality made easy.',
-		stars: '1K',
-		downloads: '4.17M',
+		stars: '1.1K',
+		downloads: '7.76M',
 		link: 'https://github.com/felangel/equatable',
 	},
 	{
 		title: 'flow_builder',
 		language: 'Dart',
 		description: 'Declarative navigation for Flutter.',
-		stars: '410',
-		downloads: '35.4K',
+		stars: '413',
+		downloads: '50.5K',
 		link: 'https://github.com/felangel/flow_builder',
 	},
 	{
 		title: 'fresh',
 		language: 'Dart',
 		description: 'A token refresh library for Dart.',
-		stars: '388',
-		downloads: '19.8k',
+		stars: '430',
+		downloads: '101K',
 		link: 'https://github.com/felangel/fresh',
 	},
 	{
@@ -47,37 +47,33 @@ const projects = [
 		language: 'Dart',
 		description: 'A template generator library.',
 		stars: '1.1K',
-		downloads: '211K',
+		downloads: '1.11M',
 		link: 'https://github.com/felangel/mason',
 	},
 	{
 		title: 'mocktail',
 		language: 'Dart',
 		description: 'A mocking library inspired by mockito.',
-		stars: '679',
-		downloads: '2.77M',
+		stars: '702',
+		downloads: '3.92M',
 		link: 'https://github.com/felangel/mocktail',
 	},
 	{
 		title: 'web_socket_client',
 		language: 'Dart',
 		description: 'A simple WebSocket client for Dart.',
-		stars: '175',
-		downloads: '20.3K',
+		stars: '177',
+		downloads: '111K',
 		link: 'https://github.com/felangel/web_socket_client',
 	},
 ];
 ---
 
-<div
-	class="flex flex-col gap-6 items-center justify-center my-20 mx-auto w-full"
->
+<div class="flex flex-col gap-6 items-center justify-center my-20 mx-auto w-full">
 	<h2 class="text-3xl font-semibold text-gray-200">Open Source Projects</h2>
 	<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-		{
-			projects.map((project) => {
-				return <Card {...project} />;
-			})
-		}
+		{projects.map((project) => {
+			return <Card {...project} />;
+		})}
 	</div>
 </div>

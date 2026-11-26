@@ -3,9 +3,7 @@ import { Image } from 'astro:assets';
 import profile from '../assets/profile.jpeg';
 ---
 
-<div
-	class="w-full flex flex-col md:flex-row gap-6 justify-center items-center my-20"
->
+<div class="w-full flex flex-col md:flex-row gap-6 justify-center items-center my-20">
 	<div class="rounded-full border-teal-500 border-4">
 		<Image
 			width="254"
@@ -18,47 +16,50 @@ import profile from '../assets/profile.jpeg';
 	<div class="flex flex-col gap-6 items-center md:items-start">
 		<h1 class="text-4xl font-bold text-gray-200">Hi, I'm Felix 👋</h1>
 		<div class="text-gray-300 text-2xl text-center md:text-left">
-			<p>Software Engineer by day.</p><p>Software Engineer by night.</p>
+			<p>Software Engineer by day.</p>
+			<p>Software Engineer by night.</p>
 		</div>
-		<div
-			class="flex flex-row items-center justify-center md:justify-start gap-4"
-		>
+		<div class="flex flex-row items-center justify-center md:justify-start gap-4">
 			<a
 				href="https://github.com/felangel"
 				aria-label="GitHub"
 				class="flex flex-row items-center gap-2 text-gray-200 hover:text-white text-lg"
-				><i class="ph-fill ph-github-logo text-3xl sm:text-xl"></i><span
-					class="hidden sm:block">GitHub</span
-				></a
 			>
+				<i class="ph-fill ph-github-logo text-3xl sm:text-xl"></i>
+				<span class="hidden sm:block">GitHub</span>
+			</a>
 			<a
 				href="https://discord.gg/bloc"
 				aria-label="Discord"
 				class="flex flex-row items-center gap-2 text-gray-200 hover:text-white text-lg"
-				><i class="ph-fill text-blue-600 ph-discord-logo text-3xl sm:text-xl"
-				></i><span class="hidden sm:block">Discord</span>
+			>
+				<i class="ph-fill text-blue-600 ph-discord-logo text-3xl sm:text-xl"></i>
+				<span class="hidden sm:block">Discord</span>
 			</a>
 			<a
 				href="https://www.linkedin.com/in/felix-angelov"
 				aria-label="LinkedIn"
 				class="flex flex-row items-center gap-2 text-gray-200 hover:text-white text-lg"
-				><i class="ph-fill text-blue-500 ph-linkedin-logo text-3xl sm:text-xl"
-				></i><span class="hidden sm:block">LinkedIn</span></a
 			>
+				<i class="ph-fill text-blue-500 ph-linkedin-logo text-3xl sm:text-xl"></i>
+				<span class="hidden sm:block">LinkedIn</span>
+			</a>
 			<a
 				href="https://twitter.com/felangelov"
 				aria-label="Twitter"
 				class="flex flex-row items-center gap-2 text-gray-200 hover:text-white text-lg"
-				><i class="ph-fill text-blue-400 ph-twitter-logo text-3xl sm:text-xl"
-				></i><span class="hidden sm:block">Twitter</span></a
 			>
+				<i class="ph-fill text-blue-400 ph-twitter-logo text-3xl sm:text-xl"></i>
+				<span class="hidden sm:block">Twitter</span>
+			</a>
 			<a
 				href="https://bsky.app/profile/felangel.bsky.social"
 				aria-label="Bluesky"
 				class="flex flex-row items-center gap-2 text-gray-200 hover:text-white text-lg"
-				><i class="ph-fill text-blue-500 ph-butterfly text-3xl sm:text-xl"
-				></i><span class="hidden sm:block">Bluesky</span></a
 			>
+				<i class="ph-fill text-blue-500 ph-butterfly text-3xl sm:text-xl"></i>
+				<span class="hidden sm:block">Bluesky</span>
+			</a>
 		</div>
 	</div>
 </div>
